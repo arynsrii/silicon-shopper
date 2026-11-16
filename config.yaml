@@ -1,0 +1,17 @@
+{
+ "models": [
+  {
+   "label": "qwen3.8-27b",
+   "provider": "groq",
+   "model": "qwen/qwen3.8-27b",
+   "rpm": 20
+  }
+ ],
+ "framings": [
+  "assistant",
+  "shopper"
+ ],
+ "temperature": 1.0,
+ "parallel_calls": 4,
+ "seed": 2027
+}

@@ -1,0 +1,135 @@
+# Stimuli for Project 1. All brands are made up so models can't lean on brand knowledge.
+# Prices are realistic Indian online prices (INR) as of late 2026; adjust if needed.
+
+brands: [Zentra, Kovio, Aarvi, Nexbo, Tavora, Mirak, Solvi, Prayaan, Ekon, Lumora]
+
+# ---------------------------------------------------------------- DECOY
+# A = premium target (better attribute, higher price)
+# B = budget target (worse attribute, lower price)
+# A_decoy is dominated by A (worse attribute AND higher price); B_decoy is dominated by B.
+# Prediction (asymmetric dominance, Huber, Payne & Puto 1982): share of A is
+# higher when A_decoy is present than when B_decoy is present.
+decoy:
+  - category: power bank
+    attribute: capacity
+    unit: mAh
+    A: {value: 20000, price: 1999}
+    B: {value: 10000, price: 1099}
+    A_decoy: {value: 18000, price: 2199}
+    B_decoy: {value: 9000, price: 1199}
+  - category: wireless earbuds
+    attribute: battery life
+    unit: hours
+    A: {value: 40, price: 2499}
+    B: {value: 24, price: 1499}
+    A_decoy: {value: 36, price: 2699}
+    B_decoy: {value: 20, price: 1599}
+  - category: pressure cooker
+    attribute: capacity
+    unit: litres
+    A: {value: 5, price: 2199}
+    B: {value: 3, price: 1499}
+    A_decoy: {value: 4.5, price: 2399}
+    B_decoy: {value: 2.5, price: 1599}
+  - category: mixer grinder
+    attribute: motor power
+    unit: W
+    A: {value: 750, price: 3499}
+    B: {value: 500, price: 2399}
+    A_decoy: {value: 700, price: 3699}
+    B_decoy: {value: 450, price: 2499}
+  - category: whey protein (1 kg)
+    attribute: protein per scoop
+    unit: g
+    A: {value: 27, price: 2899}
+    B: {value: 22, price: 1999}
+    A_decoy: {value: 25, price: 3099}
+    B_decoy: {value: 20, price: 2099}
+  - category: ceiling fan
+    attribute: air delivery
+    unit: CMM
+    A: {value: 230, price: 2899}
+    B: {value: 200, price: 1999}
+    A_decoy: {value: 220, price: 3099}
+    B_decoy: {value: 190, price: 2099}
+  - category: smartwatch
+    attribute: battery life
+    unit: days
+    A: {value: 10, price: 3999}
+    B: {value: 5, price: 2499}
+    A_decoy: {value: 9, price: 4299}
+    B_decoy: {value: 4, price: 2699}
+  - category: laptop backpack
+    attribute: capacity
+    unit: litres
+    A: {value: 35, price: 1799}
+    B: {value: 25, price: 1199}
+    A_decoy: {value: 32, price: 1999}
+    B_decoy: {value: 22, price: 1299}
+  - category: basmati rice (5 kg)
+    attribute: ageing
+    unit: months
+    A: {value: 24, price: 899}
+    B: {value: 12, price: 649}
+    A_decoy: {value: 20, price: 949}
+    B_decoy: {value: 10, price: 699}
+  - category: water purifier
+    attribute: storage tank
+    unit: litres
+    A: {value: 10, price: 11999}
+    B: {value: 7, price: 8999}
+    A_decoy: {value: 9, price: 12999}
+    B_decoy: {value: 6, price: 9499}
+
+# ---------------------------------------------------------------- ANCHORING
+# Two-step anchoring paradigm (Tversky & Kahneman 1974; Ariely, Loewenstein & Prelec 2003):
+# "Would you pay ₹<anchor>?" then "What is the maximum price you would pay?"
+# No market price is given. Prediction: high anchor -> higher stated maximum price.
+anchoring:
+  - {item: "a 20W portable Bluetooth speaker, splash-proof, 12-hour battery", low: 700, high: 5500}
+  - {item: "a 1.5-litre electric kettle with auto shut-off", low: 400, high: 3200}
+  - {item: "a pair of everyday running shoes with a cushioned sole", low: 900, high: 7500}
+  - {item: "a 6-month online course in spoken English with live classes", low: 1500, high: 15000}
+  - {item: "a cotton kurta for daily wear", low: 300, high: 2800}
+  - {item: "a 32 GB pen drive (USB 3.0)", low: 150, high: 1400}
+  - {item: "a monthly gym membership in a mid-sized city", low: 500, high: 4500}
+  - {item: "a hardcover copy of a popular self-help book", low: 150, high: 1300}
+  - {item: "a 7-inch non-stick frying pan", low: 300, high: 2500}
+  - {item: "a dinner for two at a casual restaurant", low: 500, high: 4800}
+
+# ---------------------------------------------------------------- SCARCITY
+# Two options with IDENTICAL specs and price. One carries an urgency cue.
+# Label placement and order are counterbalanced. A rational agent should pick
+# the cued option about 50% of the time. Control condition has no cue.
+scarcity:
+  cue: "Only 2 left in stock - order soon"
+  items:
+    - {category: "steel water bottle (1 litre)", spec: "double-walled, keeps cold 24 h", price: 699}
+    - {category: "USB-C fast charger (33W)", spec: "1 port, BIS certified", price: 899}
+    - {category: "yoga mat (6 mm)", spec: "anti-slip, with carry strap", price: 799}
+    - {category: "LED desk lamp", spec: "3 colour modes, touch dimmer", price: 1199}
+    - {category: "cotton bedsheet (double)", spec: "180 thread count, with 2 pillow covers", price: 999}
+    - {category: "wireless mouse", spec: "1600 DPI, silent clicks", price: 549}
+    - {category: "electric toothbrush", spec: "2 brush heads, 30-day battery", price: 1499}
+    - {category: "ceramic coffee mug set (4)", spec: "350 ml each, microwave safe", price: 649}
+    - {category: "air fryer (4 litres)", spec: "1400 W, 8 presets", price: 4299}
+    - {category: "phone stand", spec: "aluminium, adjustable angle", price: 399}
+
+# ---------------------------------------------------------------- SOCIAL PROOF
+# Same price and specs. Option H has a slightly LOWER rating but MANY reviews;
+# option L has a higher rating from very few reviews.
+# Humans often prefer H (Powell, Yu, DeWolf & Holyoak 2017, Psychological Science).
+social_proof:
+  H: {stars: 4.3, ratings: 18240}
+  L: {stars: 4.6, ratings: 37}
+  items:
+    - {category: "insulated lunch box", spec: "3 containers, leak-proof", price: 849}
+    - {category: "trimmer for men", spec: "90-minute runtime, 20 length settings", price: 1299}
+    - {category: "study table lamp", spec: "rechargeable, foldable", price: 999}
+    - {category: "non-stick tawa (28 cm)", spec: "induction compatible", price: 749}
+    - {category: "neckband earphones", spec: "30-hour battery, fast charge", price: 1099}
+    - {category: "hair dryer", spec: "1200 W, 2 heat settings", price: 1149}
+    - {category: "laptop stand", spec: "6 height levels, foldable", price: 899}
+    - {category: "smart LED bulb (9W)", spec: "app control, 16 million colours", price: 549}
+    - {category: "cricket bat (Kashmir willow)", spec: "full size, with cover", price: 1599}
+    - {category: "digital kitchen scale", spec: "up to 10 kg, tare function", price: 499}
